@@ -1,0 +1,6 @@
+dog,perro,chien
+house,casa,maison
+bird,ave,oiseau
+like,gustar,aime
+I,yo,je
+sister,hermana,sœur

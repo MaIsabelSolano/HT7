@@ -4,3 +4,8 @@ bird,ave,oiseau
 like,gustar,aime
 I,yo,je
 sister,hermana,sœur
+brother,hermano,frère
+you,tú,toi
+yours,tu,ta
+want,querer,vouloir
+park,parque,parc

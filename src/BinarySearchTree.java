@@ -207,7 +207,7 @@ public class BinarySearchTree<E extends Comparable<E>>
      *
      * @post Returns true iff val is a value found within the tree
      * 
-     * @param val The value sought.  Should be non-null
+     * @param value The value sought.  Should be non-null
      * @return True iff the tree contains a value "equals to" sought value
      */
     public boolean contains(E value)
@@ -217,6 +217,7 @@ public class BinarySearchTree<E extends Comparable<E>>
         BinaryTree<E> possibleLocation = locate(root,value);
         return value.equals(possibleLocation.value());
     }
+
 
     /**
      * Returns reference to value found within three.  This method can

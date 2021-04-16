@@ -33,7 +33,7 @@ import java.util.Comparator;
  *
  * @version $Id: BinarySearchTree.java 22 2006-08-21 19:27:26Z bailey $
  * @author, 2001 duane a. bailey
- * @see SplayTree
+ * @see "SplayTree"
  * @see BinaryTree
  */
 public class BinarySearchTree<E extends Comparable<E>>
@@ -172,7 +172,7 @@ public class BinarySearchTree<E extends Comparable<E>>
      *
      * @post Adds a value to binary search tree
      * 
-     * @param val A reference to non-null object
+     * @param "val" A reference to non-null object
      */
     public void add(E value)
     {
@@ -341,6 +341,7 @@ public class BinarySearchTree<E extends Comparable<E>>
      */
     public Iterator<E> iterator()
     {
+
         return root.inorderIterator();
     }
 
@@ -384,4 +385,5 @@ public class BinarySearchTree<E extends Comparable<E>>
         s.append(">");
         return s.toString();
     }
+
 }

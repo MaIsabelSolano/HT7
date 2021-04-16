@@ -9,3 +9,9 @@ you,tú,toi
 yours,tu,ta
 want,querer,vouloir
 park,parque,parc
+word,palabra,mot
+woman,mujer,femme
+man,hombre,homme
+song,cancion,chanson
+yes,si,oui
+duck,pato,canard

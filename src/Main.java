@@ -1,8 +1,9 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(System.in);
         Lector lector = new Lector();
         int idioma_original = 0;
@@ -14,9 +15,9 @@ public class Main {
         String expresion = "";
 
         //obtención de archivo
-        BinarySearchTree<ComparableAssociation<String,String>> ingles = lector.Lector_Asociaciones2(1);
-        BinarySearchTree<ComparableAssociation<String,String>> espanol = lector.Lector_Asociaciones2(2);
-        BinarySearchTree<ComparableAssociation<String,String>> frances = lector.Lector_Asociaciones2(3);
+        BinarySearchTree<ComparableAssociation<String,String>> ingles = lector.Lector_Asociaciones2(0);
+        BinarySearchTree<ComparableAssociation<String,String>> espanol = lector.Lector_Asociaciones2(1);
+        BinarySearchTree<ComparableAssociation<String,String>> frances = lector.Lector_Asociaciones2(2);
 
         //inicio del programa
         System.out.println("BIENVENIDO/A AL TRADUCTOR");

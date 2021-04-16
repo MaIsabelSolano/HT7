@@ -15,3 +15,7 @@ man,hombre,homme
 song,cancion,chanson
 yes,si,oui
 duck,pato,canard
+this,este,cette
+is,es,est
+a,un,une
+example,ejemplo,expemple

@@ -19,7 +19,7 @@ bird,pajaro,oiseau
 this,este,cette
 is,es,est
 a,un,une
-example,ejemplo,expemple
+example,ejemplo,exemple
 name,nombre,nom
 flower,flor,fleur
 friend,amigo,ami

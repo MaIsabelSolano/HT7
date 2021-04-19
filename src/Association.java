@@ -152,6 +152,10 @@ public class Association<K,V> implements MapEntry<K,V>
         s.append("<Association: "+getKey()+"="+getValue()+">");
         return s.toString();
     }
+
+    public boolean Exists(K p){
+        return theKey.toString().equals(p.toString());
+    }
     /*
 ...
 */

@@ -18,6 +18,9 @@ public class Main {
         BinarySearchTree<ComparableAssociation<String,String>> ingles = lector.Lector_Asociaciones2(0);
         BinarySearchTree<ComparableAssociation<String,String>> espanol = lector.Lector_Asociaciones2(1);
         BinarySearchTree<ComparableAssociation<String,String>> frances = lector.Lector_Asociaciones2(2);
+        ArrayList<Association<String,String>> ingles_ = lector.Lector_Asociaciones(0);
+        ArrayList<Association<String,String>> espanol_ = lector.Lector_Asociaciones(1);
+        ArrayList<Association<String,String>> frances_ = lector.Lector_Asociaciones(2);
 
         //inicio del programa
         System.out.println("BIENVENIDO/A AL TRADUCTOR");
@@ -43,13 +46,14 @@ public class Main {
                             id_tr = scan.nextLine();
                             if (id_tr.toLowerCase().equals("esp")) {
                                 idioma_traduccion = 1;
-                                Traducir(expresion,ingles,idioma_traduccion);
-                                //Traducir2(expresion,);
+                                //Traducir(expresion,ingles,idioma_traduccion);
+                                Traducir2(expresion,ingles_,idioma_traduccion);
 
                                 ver1 = true; //se puede salir del ciclo
                             } else if (id_tr.toLowerCase().equals("fr")) {
                                 idioma_traduccion = 2;
-                                Traducir(expresion,ingles,idioma_traduccion);
+                                //Traducir(expresion,ingles,idioma_traduccion);
+                                Traducir2(expresion,ingles_,idioma_traduccion);
                                 ver1 = true; //se puede salir del ciclo
                             } else {
                                 System.out.println(Error);
@@ -63,11 +67,13 @@ public class Main {
                             id_tr = scan.nextLine();
                             if (id_tr.toLowerCase().equals("eng")) {
                                 idioma_traduccion = 0;
-                                Traducir(expresion,espanol,idioma_traduccion);
+                                //Traducir(expresion,espanol,idioma_traduccion);
+                                Traducir2(expresion,espanol_,idioma_traduccion);
                                 ver1 = true; //se puede salir del ciclo
                             } else if (id_tr.toLowerCase().equals("fr")) {
                                 idioma_traduccion = 2;
-                                Traducir(expresion,espanol,idioma_traduccion);
+                                //Traducir(expresion,espanol,idioma_traduccion);
+                                Traducir2(expresion,espanol_,idioma_traduccion);
                                 ver1 = true; //se puede salir del ciclo
                             } else {
                                 System.out.println(Error);
@@ -81,11 +87,13 @@ public class Main {
                             id_tr = scan.nextLine();
                             if (id_tr.toLowerCase().equals("esp")) {
                                 idioma_traduccion = 1;
-                                Traducir(expresion,frances,idioma_traduccion);
+                                //Traducir(expresion,frances,idioma_traduccion);
+                                Traducir2(expresion,frances_,idioma_traduccion);
                                 ver1 = true; //se puede salir del ciclo
                             } else if (id_tr.toLowerCase().equals("eng")) {
                                 idioma_traduccion = 0;
-                                Traducir(expresion,espanol,idioma_traduccion);
+                                //Traducir(expresion,espanol,idioma_traduccion);
+                                Traducir2(expresion,frances_,idioma_traduccion);
                                 ver1 = true; //se puede salir del ciclo
                             } else {
                                 System.out.println(Error);
@@ -134,7 +142,7 @@ public class Main {
         String[] temp = expresion.split(" ");
         for (int i = 0; i<temp.length; i++){
             for (int j = 0; j<dic.size(); j++){
-                if (dic.get(j).equals(temp[i])){
+                if (dic.get(j).Exists(temp[i])){
                     //remplazar la palabra por la traduccion
                     String[] temporal = dic.get(j).getValue().split(",");
                     temp[i] = "*"+temporal[idioma]+"*";

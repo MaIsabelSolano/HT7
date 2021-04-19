@@ -5,12 +5,12 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Lector {
-    public ArrayList<Association> Lector_Asociaciones(int idioma) throws FileNotFoundException {
-        ArrayList<Association> asociaciones = new ArrayList<>();
+    public ArrayList<Association<String,String>> Lector_Asociaciones(int idioma) throws FileNotFoundException {
+        ArrayList<Association<String,String>> asociaciones = new ArrayList<>();
         File diccionario = new File("diccionario.txt");
         Scanner reader = new Scanner(diccionario);
         while (reader.hasNextLine()){
-            String data = reader.nextLine();
+            String data = reader.nextLine().toLowerCase();
             String[] temp = data.split(",");
             Association<String, String> temp_As = new Association<>(temp[idioma],data);
             asociaciones.add(temp_As);
@@ -31,7 +31,6 @@ public class Lector {
         return asociaciones;
     }
 
-    //public ArrayList<Association<String,String>> Lector_Asociaciones2
 
     public String Lector_Expresion() throws FileNotFoundException{
         String expresion = "";

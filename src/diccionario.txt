@@ -19,3 +19,12 @@ this,este,cette
 is,es,est
 a,un,une
 example,ejemplo,expemple
+name,nombre,nom
+flower,flor,fleur
+friend,amigo,ami
+love,amor,amour
+french,frances,francais
+english,ingles,anglais
+spanish,español,espanol
+complicated,complicado,complique
+too,muy,tres

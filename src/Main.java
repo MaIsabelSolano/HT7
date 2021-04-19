@@ -43,7 +43,8 @@ public class Main {
                             id_tr = scan.nextLine();
                             if (id_tr.toLowerCase().equals("esp")) {
                                 idioma_traduccion = 1;
-                                Traducir(expresion,ingles,idioma_traduccion);
+                                //Traducir(expresion,ingles,idioma_traduccion);
+                                //Traducir2(expresion,);
 
                                 ver1 = true; //se puede salir del ciclo
                             } else if (id_tr.toLowerCase().equals("fr")) {
@@ -111,14 +112,42 @@ public class Main {
     }
 
     public static void Traducir(String expresion, BinarySearchTree<ComparableAssociation<String,String>> bst, int idioma){
-        String[] temp = expresion.split(",");
+        String[] temp = expresion.split(" ");
         ComparableAssociation<String,String> temp2 = new ComparableAssociation<>(temp[idioma],"");
         for(int i = 0;i<temp.length;i++){
             if (bst.contains(temp2)){
                 temp[i] = "*"+bst.get(temp2).getValue().split(",")[idioma]+"*";
             }
         }
-        System.out.println(temp.toString());
 
+        //Volver todo un string que se lea
+        StringBuilder sb = new StringBuilder();
+        for (String s: temp){
+            sb.append(s);
+            sb.append(" ");
+        }
+        System.out.println(sb.toString());
+
+    }
+
+    public static void Traducir2(String expresion, ArrayList<Association<String, String>> dic,int idioma){
+        String[] temp = expresion.split(" ");
+        for (int i = 0; i<temp.length; i++){
+            for (int j = 0; j<dic.size(); j++){
+                if (dic.get(j).equals(temp[i])){
+                    //remplazar la palabra por la traduccion
+                    String[] temporal = dic.get(j).getValue().split(",");
+                    temp[i] = "*"+temporal[idioma]+"*";
+                }
+            }
+        }
+
+        //Volver todo un string que se lea
+        StringBuilder sb = new StringBuilder();
+        for (String s: temp){
+            sb.append(s);
+            sb.append(" ");
+        }
+        System.out.println(sb.toString());
     }
 }

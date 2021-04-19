@@ -1,3 +1,4 @@
+//Obtenido en el portal de Canvas
 public interface MapEntry<K,V>
 {
    public boolean equals (Object o);

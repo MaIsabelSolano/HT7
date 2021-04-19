@@ -1,5 +1,6 @@
 // A class for binding key/value pairs.
 // (c) 1998,2001 duane a. bailey
+//Obtenido en el portal de Canvas
 
 import java.util.Map;
 

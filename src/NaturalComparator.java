@@ -1,6 +1,6 @@
 // A comparator that implements the natural ordering.
 // (c) 2001 duane a. bailey
-
+//Obtenido en el portal de Canvas
 
 
 import java.util.Comparator;

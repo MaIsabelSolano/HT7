@@ -1,3 +1,13 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Facultad de Ingeniería
+ * Departamento de Ciencias de la Computación
+ * Estructuras de datos y algoritmos
+ * Profesor: Douglas Barrios
+ * @author Maria Isabel Solano Bonilla 20504
+ * @version 1
+ */
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.*;
@@ -119,6 +129,12 @@ public class Main {
         }
     }
 
+    /**
+     * Realiza la traducción
+     * @param expresion String con la frase a traducir
+     * @param bst diccionario con las palabras
+     * @param idioma número del idioma al que se quiere traducir (0 Inglés, 1 Español, 2 Francés)
+     */
     public static void Traducir(String expresion, BinarySearchTree<ComparableAssociation<String,String>> bst, int idioma){
         String[] temp = expresion.split(" ");
         ComparableAssociation<String,String> temp2 = new ComparableAssociation<>(temp[idioma],"");
@@ -138,6 +154,12 @@ public class Main {
 
     }
 
+    /**
+     * Realiza la traducción
+     * @param expresion String con la frase a traducir
+     * @param dic diccionario con las palabras
+     * @param idioma número del idioma al que se quiere traducir (0 Inglés, 1 Español, 2 Francés)
+     */
     public static void Traducir2(String expresion, ArrayList<Association<String, String>> dic,int idioma){
         String[] temp = expresion.split(" ");
         for (int i = 0; i<temp.length; i++){
@@ -149,7 +171,6 @@ public class Main {
                 }
             }
         }
-
         //Volver todo un string que se lea
         StringBuilder sb = new StringBuilder();
         for (String s: temp){

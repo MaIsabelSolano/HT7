@@ -62,3 +62,10 @@ ten,diez,dix
 moth,mes,mois
 number,numero,numero
 numbers,numeros,numeros
+help,ayuda,aide
+hero,heroe,heros
+we,nosotros,nous
+best-friend,mejora-amigo,meilleur-ami
+freedom,libertad,liberte
+play,jugar,jouer
+music,musica,musique

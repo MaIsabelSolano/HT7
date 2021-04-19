@@ -43,13 +43,13 @@ public class Main {
                             id_tr = scan.nextLine();
                             if (id_tr.toLowerCase().equals("esp")) {
                                 idioma_traduccion = 1;
-                                //Traducir(expresion,ingles,idioma_traduccion);
+                                Traducir(expresion,ingles,idioma_traduccion);
                                 //Traducir2(expresion,);
 
                                 ver1 = true; //se puede salir del ciclo
                             } else if (id_tr.toLowerCase().equals("fr")) {
                                 idioma_traduccion = 2;
-                                Traducir(expresion,frances,idioma_traduccion);
+                                Traducir(expresion,ingles,idioma_traduccion);
                                 ver1 = true; //se puede salir del ciclo
                             } else {
                                 System.out.println(Error);
@@ -106,7 +106,7 @@ public class Main {
 
             //Iniciar traducción
             System.out.println("_______________________________________________________________");
-            System.out.println("\nIngrese la frase que desea traducir:\n(O ingrese la palabra SALIR para finalizar el programa");
+            System.out.println("\nDe click en ENTER para repetir\n(O ingrese la palabra SALIR para finalizar el programa");
             expresion = scan.nextLine();
         }
     }

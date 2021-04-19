@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -30,10 +31,12 @@ public class Lector {
         return asociaciones;
     }
 
-    public String Lector_Expresion(){
+    //public ArrayList<Association<String,String>> Lector_Asociaciones2
+
+    public String Lector_Expresion() throws FileNotFoundException{
         String expresion = "";
         File documento = new File("text.txt");
-        Scanner reader = new Scanner("documento");
+        Scanner reader = new Scanner(documento);
         while(reader.hasNextLine()){
             expresion = reader.nextLine(); //reemplaza la expresion
         }
